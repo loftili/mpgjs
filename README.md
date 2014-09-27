@@ -1,4 +1,4 @@
-# MPGJS [![Build Status](https://travis-ci.org/loftili/mpgjs.svg?branch=master)](https://travis-ci.org/loftili/mpgjs)
+# MPGJS [![Build Status](https://travis-ci.org/loftili/mpgjs.svg?branch=master)](https://travis-ci.org/loftili/mpgjs) [![NPM version](https://badge.fury.io/js/mpgjs.svg)](http://badge.fury.io/js/mpgjs)
 
 This project was designed to bring the functionality from mpg123 into node by creaing a node native extension. 
 
