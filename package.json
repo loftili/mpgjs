@@ -1,0 +1,20 @@
+{
+  "name": "mpgjs",
+  "version": "0.0.1",
+  "description": "native node extenstion for libmpg123",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha ./test"
+  },
+  "author": "",
+  "repository": "git://github.com/loftili/mpgjs.git",
+  "homepage": "https://github.com/loftili/mpgjs",
+  "bugs": {
+    "url": "http://jira.sizethreestudios.com/secure/RapidBoard.jspa?rapidView=7",
+    "email": "danny@loftili.com"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "mocha": "^1.21.4"
+  }
+}
