@@ -2,8 +2,12 @@ language: node_js
 node_js:
 - '0.10'
 before_install:
-- sudo apt-get update -qq
-- sudo apt-get install mpg123
+- wget http://ftp.sizethreestudios.com/artifacts/loftili/libs/mpg123-1.20.1.tar.bz2
+- tar xjvf mpg123-1.20.1.tar.bz2
+- cd mpg123-1.20.1
+- ./configure && make && sudo make install
+- cd ..
+- export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib
 install:
 - npm install
 script:
