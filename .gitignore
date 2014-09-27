@@ -1,1 +1,12 @@
+logs
+*.log
+*.swp
+pids
+*.pid
+*.seed
+lib-cov
+coverage
+.grunt
 build/
+node_modules/
+.lock-wscript
