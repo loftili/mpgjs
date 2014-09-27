@@ -24,6 +24,7 @@ Handle<Value> isValid(const Arguments& args) {
   mh = mpg123_new(NULL, &err);
   mpg123_param(mh, MPG123_FLAGS, MPG123_QUIET, 0);
   if(mh == NULL) {
+    mpg123_close(mh);
     ThrowException(Exception::TypeError(String::New("mpg123 unable to create a handle")));
     return scope.Close(Undefined());
   }
@@ -31,6 +32,7 @@ Handle<Value> isValid(const Arguments& args) {
   std::string filepath = to_str(args[0]->ToString());
   err = mpg123_open(mh, filepath.c_str());
   if(err != MPG123_OK) {
+    mpg123_close(mh);
     return scope.Close(Boolean::New(false));
   }
 
@@ -38,9 +40,11 @@ Handle<Value> isValid(const Arguments& args) {
   long rate;
   err = mpg123_getformat(mh, &rate, &channels, &encoding);
   if(err != MPG123_OK){
+    mpg123_close(mh);
     return scope.Close(Boolean::New(false));
   }
 
+  mpg123_close(mh);
   return scope.Close(Boolean::New(true));
 }
 
