@@ -1,6 +1,6 @@
 {
   "name": "mpgjs",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "native node extenstion for libmpg123",
   "main": "index.js",
   "scripts": {
